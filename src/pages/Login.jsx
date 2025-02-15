@@ -47,10 +47,10 @@ function Login() {
   return(
     <div>
       {/* <Navbar/> */}
-      <div className="w-full h-[100vh] flex justify-center bg-white items-center">
-    <div className="flex flex-col justify-center items-center  border border-r-1 border-solid w-[30%] bg-sky-50  h-[50%] gap-5 text-black  ">
+      <div className="w-full h-[100vh] flex justify-center bg-black items-center">
+    <div className="flex flex-col justify-center items-center  border border-r-1 border-solid w-[30%] bg-black h-[50%] gap-5 text-white  ">
 
-      <div className="text-black">
+      <div className="text-white ">
       <h1>Login Form</h1>
       </div>
 
@@ -58,7 +58,7 @@ function Login() {
         <input name="email" value={formData.email} onChange={handleData} className="text-center  text-black mb-5 border border-black rounded-md" type="email" placeholder="enter your email"/>
         <input name="password" value={formData.password} onChange={handleData} className="text-center border text-black border-black rounded-md" type="password" placeholder="enter your password" />
         <div className="">
-        <button onClick={submit} className="border border-black rounded-md mt-5 w-full ">Submit</button>
+        <button onClick={submit} className="border border-white rounded-md mt-5 w-full ">Submit</button>
         </div>
       </div>
 

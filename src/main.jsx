@@ -1,22 +1,22 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Login from "./pages/Login";
+// import Login from "./pages/Login";
 
-// import { Provider } from "react-redux";
-// import { myStore } from "./store/store";
-// import App from "./App";
-// import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { myStore } from "./store/store";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Provider store={myStore}>
         <App />
       </Provider>
-    </BrowserRouter> */}
-    <Login/>
+    </BrowserRouter>
+    {/* <Login/> */}
    
   </StrictMode>
 );
