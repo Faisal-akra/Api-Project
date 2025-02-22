@@ -1,4 +1,4 @@
-
+import { toast } from "react-toastify";
 import { toggleFavorite } from "@/slices/favorite";
 import { HeartIcon, ShoppingCart } from "lucide-react";
 
@@ -10,6 +10,7 @@ function FeaturedProduct() {
 
   const  handleFav = (date) => {
     dispatch(toggleFavorite(date))
+    toast.success("product add successfully")
   }
 
   return (
@@ -29,8 +30,8 @@ function FeaturedProduct() {
               <div></div>
               <div className="bg-blue-200 p-2 hover:bg-blue-400 group">
                 <div className="flex gap-2">
-                  <ShoppingCart />
-                  <HeartIcon  onClick={() => handleFav(product)} className="bg-red-500"/>
+                  <ShoppingCart  onClick={() => handleFav(product)} className="cursor-pointer"  />
+                  <HeartIcon  onClick={() => handleFav(product)} className="cursor-pointer"/>
                 </div>
 
                 <img
@@ -46,7 +47,7 @@ function FeaturedProduct() {
                 <div className=" text-center group-hover:font-semibold group-hover:bg-blue-900 ">
                   <h2>{product.title}</h2>
                   <p>${product.price}</p>
-               
+
                 </div>
               </div>
 
@@ -61,8 +62,11 @@ function FeaturedProduct() {
 
 export default FeaturedProduct;
 
-{
-  /* 
+
+
+
+// {
+/* 
  const featuredProduct = [
   {
     id: 1,
@@ -125,24 +129,45 @@ export default FeaturedProduct;
 }
 
 export default FeaturedProduct; */
-}
+// }
 
 
+// import { toggleFav } from "@/slices/favorite";
+// import { Heart } from "lucide-react";
+// import {  useDispatch, useSelector } from "react-redux";
+
+// const Feautured = () => {
+//   const { isLoading, products } = useSelector((state) => state.products);
+//  const dispatch = useDispatch();
+
+//  const handleFav = (data) => {
+//   dispatch(toggleFav(data))
+//  }
 
 
+//   return (
+//     <div>
+//       {isLoading ? (
+//         <p>loading.........</p>
+//       ) : (
+//         products.slice(4, 9).map((product) => (
+//           <div key={product.id} className="">
 
+//             <img src={product?.images[0]} alt="" className="  w-32" />
 
+//             <h1>{product.title}</h1>
+//             <h2>{product.price}</h2>
+            
+//             <Heart onClick={() => handleFav(product)}  />
 
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// };
 
-
-
-
-
-
-
-
-
-
+// export default Feautured;
 
 
 
@@ -160,11 +185,10 @@ export default FeaturedProduct; */
 //   useEffect(() => {
 //     dispatch(fetchProducts())
 //   }, [])
- 
+
 //   return(
 //     <div>
 
-     
 //       {
 //         isLoading ? (
 //           <p>Loading.......</p>
@@ -182,9 +206,4 @@ export default FeaturedProduct; */
 //   )
 // }
 
-
 // export default FeaturedProduct;
-
-
-
-

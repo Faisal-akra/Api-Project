@@ -1,86 +1,66 @@
-
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home"
 import Favourite from "./pages/Favourit";
 import ProductDetail from "./pages/Product-Deatil";
 import FilterProduct from "./pages/Filter";
 import Login from "./pages/Login";
-
-
-
-
-
-
-
-
+import Cart from "./pages/Cart";
 
 function App() {
-
 
   return (
     <>
 
-
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/favourite" element={<Favourite/>}/>
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="/detail" element={<ProductDetail/>}/>
         <Route path="/filter" element={<FilterProduct/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
       </Routes>
 
-   
     </>
   );
 }
 
-
-
 export default App;
 
 
+// import { Route, Routes } from "react-router-dom";
+// import Fav from "./pages/Favourit";
+// import Home from "./pages/Home";
+// import { useEffect } from "react";
+// import { fetchProducts } from "@/slices/products";
+// import { useDispatch } from "react-redux";
+// const App = () => {
+//   const dispatch = useDispatch();
 
+//   useEffect(() => {
+//     dispatch(fetchProducts());
+//   }, []);
 
+//   return (
+//    <div>
+//     <Routes>
+//     <Route path="/" element={<Home/>}/>
+//       <Route path="/fav" element={<Fav/>}/>
+//     </Routes>
+//    </div>
+   
+//   );
+// };
 
+// export default App;
 
+// import { useDispatch } from "react-redux";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { useDispatch, useSelector } from "react-redux";
-// import { Carousel } from "./components/ui/carousel";
-// import FeaturedProduct from "./customComponents/FeaturedProduct";
-// import { CarouselPlugin } from "./customComponents/HeroSection";
-// import LatestProduct from "./customComponents/LatestProduct";
+// // import FeaturedProduct from "./custom-components/Feautured";
+// // import LatestProduct from "./custom-components/Latest";
 // import Navabar from "./customComponents/Navabar";
 // import { useEffect } from "react";
-// import { fetchProducts, setProduct } from "./slices/ProductSlice";
-// import axios from "axios";
+// import { fetchProducts } from "./slices/ProductSlice";
+// // import axios from "axios";
 // import { Route, Routes } from "react-router-dom";
 // import Home from "./pages/Home";
 // import Favorite from "./pages/Favorite";
@@ -88,15 +68,15 @@ export default App;
 // import { FilterProduct } from "./customComponents/FilterProduct";
 // import Signup from "./pages/Signup";
 // import Login from "./pages/Login";
-// import ProductForm from "./pages/ProductForm";
-// import { app } from "./firebaseConfig";
+// import ProductForm from "./pages/Product-Deatil";
+// import { myApp } from "./firebaseconfig";
 // import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 // import { toast } from "react-toastify";
 // // import { setProduct } from "./slices/ProductSlice";
 
 // function App() {
 //   const dispatch = useDispatch();
-//   const auth = getAuth(app);
+//   const auth = getAuth(myApp);
 //   // Alternative for createASyncThunk
 //   // const fetchProducts = async () => {
 //   //   const response = await axios.get(
@@ -113,8 +93,8 @@ export default App;
 //     dispatch(fetchProducts());
 //   }, []);
 //   const handleResetPassword = async () => {
-//     const response = await sendPasswordResetEmail(auth, "abdul17097@gmail.com");
-//     sendPasswordResetEmail(auth, "abdul17097@gmail.com")
+//     const response = await sendPasswordResetEmail(auth, "zjan45097@gmail.com");
+//     sendPasswordResetEmail(auth, "zjan45097@gmail.com")
 //       .then(() => {
 //         toast.success("Email sent successfully");
 //         // Password reset email sent!

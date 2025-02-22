@@ -5,6 +5,8 @@ import axios from "axios";
 
 
 
+
+
 export const fetchProducts = createAsyncThunk(
   "product/allProduct",
   
@@ -99,5 +101,47 @@ export const {setSearchQuery, setCategory} = ProductSlice.actions;
 
 
 
+// import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+// import axios from "axios"
 
 
+// export const fetchProducts = createAsyncThunk(
+//   'product/allProduct',
+//   async() => {
+//    try {
+//     const response = await axios.get("https://api.escuelajs.co/api/v1/products")
+//     return response.data
+//    } catch (error) {
+//     return error
+//    }
+//   }
+// )
+
+
+// export const ProductSlice = createSlice({
+//   name: 'product',
+//   initialState: {
+//     isLoading: false,
+//     products: [],
+//     message: ""
+//   },
+//   extraReducers: (builder) => {
+//     builder.addCase(fetchProducts.fulfilled, (state, action) => {
+//       state.isLoading = false;
+//       state.products = action.payload;
+
+//     })
+
+//     builder.addCase(fetchProducts.rejected, (state, action) => {
+//       state.isLoading = false;
+//       state.message = action.error.message
+//     })
+
+//     builder.addCase(fetchProducts.pending, (state) => {
+//       state.isLoading = true
+//     })
+//   }
+// })
+
+
+// export default ProductSlice.reducer;

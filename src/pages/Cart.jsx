@@ -1,8 +1,6 @@
 import Navbar from "../custom-components/Navbar";
 import img1 from "../assets/feautured-products/perfume.png"
 
-
-
 import { HeartIcon, ShoppingCart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "@/slices/favorite";
@@ -10,7 +8,7 @@ import { toast } from "react-toastify";
 
 
 
-function Favourite() {
+function Cart() {
   const items = useSelector((state) => state.favoriteslice);
   const dispatch = useDispatch();
 
@@ -39,9 +37,9 @@ function Favourite() {
                 <h2>$50</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
                 <div className=" m-2 flex justify-around">
-                  <HeartIcon onClick={() => handleFavorite(product)} className="cursor-pointer" />
+                  <HeartIcon className="cursor-pointer"  />
 
-                  <ShoppingCart className="cursor-pointer" />
+                  <ShoppingCart onClick={() => handleFavorite(product)} className="cursor-pointer" />
                 </div>
               </div>
             </div>
@@ -52,7 +50,7 @@ function Favourite() {
   );
 }
 
-export default Favourite;
+export default Cart;
 
 
 
@@ -61,18 +59,3 @@ export default Favourite;
 
 
 
-// const Fav = () => {
-// const items = useSelector((state) => state.favorite);
-// console.log(items);
-
-//   return(
-//     <div>
-//       <Navbar/>
-//     <h1>Favoite</h1>
-
-  
-//     </div>
-//   )
-// }
-
-// export default Fav;

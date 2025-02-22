@@ -1,10 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from "@/slices/products";
-
-
-
-
 import Hero from "@/custom-components/Hero";
 import FeaturedProduct from "@/custom-components/Feautured";
 import Latest from "@/custom-components/Latest";
@@ -33,5 +29,19 @@ function Home() {
 export default Home;
 
 
+// import Navbar from "../custom-components/Navbar";
+// import Feautured from "..//custom-components/Feautured";
 
 
+
+// const Home = () => {
+//   return(
+//   <div>
+//     <Navbar/>
+//     <Feautured/>
+
+//   </div>
+//   )
+// }
+
+// export default Home;

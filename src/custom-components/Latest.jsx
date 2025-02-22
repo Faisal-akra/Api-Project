@@ -3,6 +3,7 @@
 import { toggleFavorite } from "@/slices/favorite";
 import { HeartIcon, ShoppingCart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 
 function Latest() {
@@ -11,6 +12,7 @@ function Latest() {
 
   const handleLatest = (e) => {
     dispatch(toggleFavorite(e))
+    toast.success('product add successfully')
   }
 
   return (
@@ -24,8 +26,8 @@ function Latest() {
             <div className="flex  " key={product.id}>
               <div className="bg-blue-50 p-2 hover:bg-blue-400 group">
                 <div>
-                  <ShoppingCart />
-                  <HeartIcon onClick={() => handleLatest(product)} />
+                  <ShoppingCart onClick={() => handleLatest(product)} className="cursor-pointer" />
+                  <HeartIcon onClick={() => handleLatest(product)} className="cursor-pointer" />
                 </div>
 
                 <img

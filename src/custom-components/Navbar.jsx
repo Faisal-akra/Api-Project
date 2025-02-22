@@ -3,10 +3,11 @@ import  {SearchCheck, ShoppingCart, HeartIcon} from "lucide-react"
 import  {Link} from "react-router-dom"
 
 
+
 function Navbar() {
   return(
     <div>
-<div className="flex justify-between  w-[100%] p-5  max-h-screen-xl pb-10">
+<div className="flex justify-between  w-[100%]   p-5 bg-blue-300">
 <div className="flex justify-between gap-20">
   <h1>Faisal-Electronics</h1>
   <ul className="flex gap-5" >
@@ -21,7 +22,7 @@ function Navbar() {
 <SearchCheck/>
 <input  type="search" placeholder="Type Search" />
 
-<ShoppingCart/>
+<Link to={'/cart'}><ShoppingCart/></Link>
 <Link to={"/favourite"}> <HeartIcon/>  </Link>
 </div>
 </div>
@@ -31,9 +32,25 @@ function Navbar() {
 
 export default Navbar;
 
+// import { Heart } from "lucide-react";
+// import { Link } from "react-router-dom"
 
 
+// const Navbar = () => {
+//   return(
+//     <div className="flex gap-5 p-5 bg-blue-600">
 
+//         <Link to={'/fav'}><Heart/></Link>
+//         <Link to={'/'}>Home</Link>
+
+
+//       </div>
+
+//   )
+// }
+
+
+// export default Navbar;
 
 
 // import { useEffect } from "react";
