@@ -61,18 +61,18 @@ export default Favourite;
 
 
 
-// const Fav = () => {
-// const items = useSelector((state) => state.favorite);
-// console.log(items);
 
+
+// const Favourite = () => {
+
+//   const check = useSelector((state) => state.)
 //   return(
 //     <div>
-//       <Navbar/>
-//     <h1>Favoite</h1>
-
-  
+// <h1>Faisal</h1>
 //     </div>
 //   )
 // }
 
-// export default Fav;
+
+// export default Favourite;
+
